@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+
+    
     body {
       font-size: 1.2vw;
       background-color: beige;
@@ -15,38 +17,13 @@
       line-height: 1.8;
       word-wrap: break-word;
     }
-
-.header {
-  width: 100%;
-  height: 10vw;
-  padding-left: 2%;
-  padding-right: 98%;
-    margin: -8vw;
-    border-bottom: 1px solid black;
-    background-color: beige;
-    font-size: 2.5vw; 
-    word-wrap: break-word; 
-    letter-spacing: -.5px;
-    word-spacing: 3px; 
-    font-family: 'Inter','Noto Sans KR',sans-serif;
-    font-weight: 500; 
-    justify-content: center;
-    align-items: center;
-    word-wrap: break-word;
-    text-align: center;
-    position: fixed;
-}
-
-.header ul li {
-    padding: 0 5px;
-    float: left;
-    display: block;
-    list-style: none;
-    margin-top: 2vw;
-    margin-left: 2vw;
-}
-
-
+    .Header {
+      font-family: 'Inter', 'Noto Sans KR', sans-serif;
+      font-weight: 500;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid black;
+    }
     .BookInfo {
       display: flex;
       justify-content: center;
@@ -107,15 +84,229 @@
   .author-name {
     margin: 0;
   }
-  
-    a {
-  text-decoration: none;
-  color: black;
 
-  </style>
+ #header{
+    width: 100vw;
+    height: 7vw;
+    margin-top: -2vw;
+    border-bottom: 1px solid black;
+    background-color: beige;
+    
+    font-size: 2.5vw; 
+  word-wrap: break-word; 
+  letter-spacing: -.5px;
+  word-spacing: 3px; 
+  font-family: 'Inter','Noto Sans KR',sans-serif;
+  font-weight: 500; 
+    text-align: left;
+    
+    /* position: fixed; */ /* 이 부분을 주석 처리하거나 삭제합니다. */
+    z-index: 2;
+}
+
+
+#header ul li{
+    padding: 0 5px;
+    float: left;
+    display: block;
+    list-style: none;
+    margin-top: 2vw;
+    margin-left: 2vw;
+}
+
+.bookname{
+  font-size: 2vw;
+  padding: 0.3vw;
+}
+
+.칵테일:hover{
+  font-weight: 900;
+  transition: 1s;
+}
+
+.모눈지우개:hover{
+  font-weight: 900;
+  transition: 1s;
+}
+
+#bodyall {
+    margin: 2vw;
+    padding: 0;
+    background-color: beige;
+  }
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+  * {margin:0;padding:0;}
+  .section {clear: both; border-bottom: 1px solid black;}
+  .section input[id*="slide"] {display:none;}
+
+  .section .slide-wrap {max-width:1200px;margin:0 auto;}
+  .section .slidelist {white-space:nowrap;font-size:0;overflow:hidden;}
+  .section .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .5s;}
+  .section .slidelist > li > a {display:block;position:relative;}
+  .section .slidelist > li > a img {width:100%;}
+  .section .slidelist label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}
+  .section .slidelist .left {left:1vw;background:url('./img/left.png') center center / 15vw no-repeat;}
+  .section .slidelist .right {right:1vw;background:url('./img/right.png') center center / 15vw no-repeat;}
+  .section .slidelist .textbox {position:absolute;z-index:1;top:50%;left:50%;transform:translate(-50%,-50%);line-height:1.6;text-align:center;}
+  
+  .section .slidelist .textbox p {font-size:24px;opacity:0;transform:translateY(30px);transition:all .5s;}
+  
+
+  .section input[id="slide01"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(0%);}
+  .section input[id="slide02"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(-100%);}
+  .section input[id="slide03"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(-200%);}
+
+  .section input[id="slide01"]:checked ~ .slide-wrap li:nth-child(1) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+  .section input[id="slide02"]:checked ~ .slide-wrap li:nth-child(2) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+  .section input[id="slide03"]:checked ~ .slide-wrap li:nth-child(3) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+
+    .section .slidelist .textbox span {font-size:24px;opacity:0;transform:translateY(30px);transition:all .5s;}
+
+  .section input[id="slide01"]:checked ~ .slide-wrap li:nth-child(1) .textbox span {opacity:1;transform:translateY(0);transition-delay:.4s;}
+  .section input[id="slide02"]:checked ~ .slide-wrap li:nth-child(2) .textbox span {opacity:1;transform:translateY(0);transition-delay:.4s;}
+  .section input[id="slide03"]:checked ~ .slide-wrap li:nth-child(3) .textbox span {opacity:1;transform:translateY(0);transition-delay:.4s;}
+  
+.section .slidelist .textbox div {
+        width: 100%;
+        height: 45vw;
+      }
+.section .slidelist .textbox div.left1 {
+        width: 50%;
+        float: left;
+        margin-top: 18vw;
+      }
+.section .slidelist .textbox div.right2 {
+        width: 50%;
+        float: right;
+        text-align: center;
+        margin-top: 35vw;
+      }
+
+.section .slidelist .textbox div.left2 {
+        width: 50%;
+        float: left;
+        margin-top: 20vw;
+        margin-left: -1vw;
+      }
+
+.section .slidelist .textbox div.right3 {
+  font-family: 'Inter', 'Noto Sans KR', sans-serif;
+    font-size: 1.7vw;
+    letter-spacing: -0.5px;
+    word-spacing: 3px;
+    text-align: left; 
+    line-height: 3vw;
+    margin-left: 2.5vw;
+    margin-top: -8vw;
+}
+
+  #article01 {
+  height: 107vw;
+    padding: 2vw;
+    margin-top: 3vw;
+    border-bottom: 1px solid black;
+
+    word-wrap: break-word; 
+
+    font-size: 1.2vw; 
+  letter-spacing: -.5px;
+  word-spacing: 3px; 
+  line-height: 1.8; 
+  font-family: 'Inter','Noto Sans KR',sans-serif;
+  font-weight: 500; 
+    text-align: left;
+  }
+
+  .row0{
+    width: 100%;
+    height: 45vw;
+  }
+  .left0{
+        width: 50%;
+        float: left;
+
+  }
+
+  .right0{
+        width: 50%;
+        float: right;
+        text-align: left;
+        margin-top: 35vw;
+    }
+
+
+  #article02{
+    padding: 2vw;
+    margin-top: 2vw;
+
+    font-size: 1.2vw; 
+  letter-spacing: -.5px;
+  word-spacing: 3px; 
+  line-height: 1.8; 
+  font-family: 'Inter','Noto Sans KR',sans-serif;
+  font-weight: 500; 
+    text-align: left;
+}
+
+    .gallerylist {width:80vw; height: 30vw;}
+  .gallerylist > ul {font-size:0;}
+  .gallerylist > ul > li {display:inline-block;vertical-align:top;width:25%;margin-right: 1.5vw;}
+  .gallerylist > ul > li > a {display:block;width:auto;text-decoration: none;}
+  .gallerylist > ul > li > a .screen {position:relative;overflow:hidden;}
+  .gallerylist > ul > li > a .screen .top {position:absolute;top:100%;left:1.2vw;z-index:2;font-size:1.8vw;word-spacing: 1px;font-weight:900;transition:all .35s;}
+  .gallerylist > ul > li > a .screen .top1 {position:absolute;top:100%;left:1.2vw;z-index:2;font-size:1.8vw;word-spacing: 1px;font-weight:900;transition:all .35s;}
+  .gallerylist > ul > li > a .screen .bottom {position:absolute;top:100%;left:1.2vw;z-index:2;font-size:1.5vw;word-spacing: 1px;transition:all .35s;}
+  .gallerylist > ul > li > a .screen img {width:20vw;}
+  .gallerylist > ul > li > a .screen::after {content:'';display:block;position:absolute;top:100%;left:0;width:100%;height:100%;background:white;z-index:z;opacity:0;transition:all .30s;}
+  .gallerylist > ul > li > a:hover .top {top:40%;}
+  .gallerylist > ul > li > a:hover .top1 {top:30%;}
+  .gallerylist > ul > li > a:hover .bottom {top:52%;}
+  .gallerylist > ul > li > a:hover .screen::after {opacity:1; top:0%}
+
+
+  #footer{
+    margin-top: 10px;
+    height: 20vw;
+    padding: 20px;
+
+    font-size: 1.2vw; 
+  letter-spacing: -.5px;
+  word-spacing: 3px; 
+  line-height: 1.8; 
+  font-family: 'Inter','Noto Sans KR',sans-serif;
+  font-weight: 500; 
+  text-align: center;
+
+    border-top: 1px solid black;
+    overflow: hidden;
+}
+
+  .buy{
+    border: 1px solid black;
+    border-radius: 30vw;
+    width: 10vw;
+    padding: 1vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vw;
+  }
+
+  .buy:hover{
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+  }
+
+
+</style>
 </head>
 <body>
-  <div class="header">
+<div id="header">
     <ul>
         <li><b><a href="index.html">이달의 책</a></b></li>
         <div class="bookname">
@@ -125,12 +316,17 @@
         <div class="모눈지우개">
             <li><a href="columm2.html">모눈 지우개</a></li>
         </div>
-        <div class="index.html">
-            <li><a href="링크">안녕, 소중한 사람</a></li>
-        </div>
       </div>
     </ul>
 </div>
+
+    
+  </style>
+</head>
+<body>
+  <div class="Header">
+    <h1>이달의 책</h1>
+  </div>
   <div class="BookInfo">
     <div class="BookDescription">
       <h2 class="BookTitle">&lt;칵테일, 러브, 좀비&gt;</h2>
@@ -152,17 +348,16 @@
   </div>
   <div class="image-container" style="text-align: center;">
     <a href="https://www.yes24.com/Product/Goods/114336899" target="_blank">
-      <img src="img2/뉴서울파크.jpeg" class="author-image">
+      <img src="https://image.yes24.com/goods/74820501/XL" class="author-image">
     </a>
     <a href="https://product.kyobobook.co.kr/detail/S000061584825" target="_blank">
-      <img src="img2/트로피컬 나이트.jpeg" class="author-image">
+      <img src="https://image.yes24.com/goods/111704883/XL" class="author-image">
     </a>
     <a href="https://www.yes24.com/Product/Goods/114336899" target="_blank">
-      <img src="img2/하트모양 크래커.jpeg" class="author-image">
+      <img src="https://image.yes24.com/Goods/114336899/XL" class="author-image">
     </a>
   </div>
 </div>
-
 
 <style>
   .image-container {
@@ -198,7 +393,7 @@
       </p>
     </div>
     <div class="right-column">
-      <img src="img2/칵테일 럽 좀.jpg" class="column-image">
+      <img src="https://image.yes24.com/goods/89913383/XL" class="column-image">
     </div>
   </div>
 </div>
@@ -208,7 +403,7 @@
   <div class="inner-wrapper">
     <div class="left-column">
       <p>
-        <strong>목차</strong> <br>
+        <strong>■ 목차</strong> <br>
         초대 _ 6p <br>
         습지의 사랑 _ 42p <br>
         칵테일, 러브, 좀비 _ 74p <br>
@@ -218,7 +413,7 @@
       </p>
     </div>
     <div class="right-column">
-      <img src="img2/칵테일 럽 좀 1.jpg" class="column-image">
+      <img src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F38c37c31-a137-4d78-93ad-5a6f8e1dd878%2F_.jpg&blockId=2f9bf505-670d-4a77-b329-1698fc008608" class="column-image">
     </div>
   </div>
 </div>
@@ -234,17 +429,20 @@
           <strong> p49, <습지의 사랑> </strong> <br>
             “미안해, 아빠. 하지만 어쩔 수 없어. 아빠 먹이자고 살인을 할 수는 없잖아. 배고파도 참아 봐. 뭔가 방법이 나오겠지.”
 말은 그렇게 했지만, 방법이 나올 기미는 보이지 않았다. 애초에 이미 심장이 멈춘 사람을 살리는 백신은 있을 수 없었다. 머릿속에 ‘좀비 신고 999’가 떠다닌 지는 꽤 되었다. <br>
-<strong> p83, <칵테일, 러브, 좀비> </strong>
+<strong> p83, <칵테일, 러브, 좀비> </strong> <br>
+  아버지는 굳이 사과가 아니어도 언젠가 무슨 핑계로든 어머니를 찔렀을 것이다. 나 역시 굳이 오늘이 아니어도 언젠가 아버지를 죽였을 것이다. 동기나 타이밍의 문제가 아니었다. 이것은 언젠가는 벌어지고야 말 일이었던 것이다. 단지 그날이 오늘이었던 것뿐. 질긴 문어 초밥을 꼭꼭 씹어 삼키자 모든 미련이 사라졌다. 그리고 나는 개운한 마음으로 칼을 들어 내 목을 찔렀다. <br>
+<strong> p114, <오버랩 나이프, 나이프> </strong>
+
       </p>
     </div>
     <div class="right-column">
-      <img src="img2/칵테일 럽 좀 2.jpg" class="column-image">
+      <img src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4619c0ba-b403-407d-948a-07abb736cd03%2F_.jpg&blockId=dc0d7846-e0bd-44e7-92dd-df7ee78ff154" class="column-image">
     </div>
   </div>
 </div>
 <strong> <div class="buy-now"> </strong>
         <a href="https://www.ypbooks.co.kr/book.yp?bookcd=101021671&gubun=NV&NaPm=ct%3Dlid2fod4%7Cci%3Da7928b1134d9734b00d552cc62ecf74c9185f528%7Ctr%3Dboksl1%7Csn%3D5295494%7Chk%3Db1d0923178f45902f2a478aff88531f62e8a9993" target="_blank" class="buy-button">구매하기</a>
-       <p class="book-info">컴퓨터 프로그래밍<br>22257152 배성진 22357004 김규란 22357038 유애림 22357044 이규민 이달의 책</p>
+       <p class="book-info">컴퓨터 프로그래밍<br>이달의 책</p>
     </div>
   </div>
 </div>
